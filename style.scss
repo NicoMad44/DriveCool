@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap');
+
+
+$cd-mainColor: #0f4c81;
+$mainFont: "Playwrite HU";
+$borderRad: 20px;
+
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: $cd-mainColor;
+    font-family: $mainFont,sans-serif;
+    border-radius: $borderRad;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    & img{
+        width: 3rem;
+        height: 3rem;
+    }
+    & .pageTitle{
+    width: 100%;
+    color: white;
+    text-align: center;
+    }
+}
+
+main{
+    font-family: $mainFont,sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.parametre{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    width: 90%;
+    & div{
+        width: 100%;
+    }
+
+    & input{
+        width: 90%;
+    }
+
+    & .infoInput{
+        font-weight: 700;
+        font-size: larger;
+        color: $cd-mainColor;
+    }
+}
+
+/* .btn{
+    background-color: white;
+    border: 2px solid $cd-mainColor;
+    border-radius: $borderRad;
+    padding: 0.5rem;
+    margin: 2rem;
+    width:20vh;
+    text-align: center;
+    &:hover{
+        background-color: $cd-mainColor;
+        color: white;
+    }
+} */
+
+.results{
+    margin-top: 2rem;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & table {
+        width: 80%;
+        border-collapse: collapse;
+        border: 2px solid $cd-mainColor;
+        font-family: "roboto", sans-serif;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+}
+

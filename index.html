@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveCool</title>
+    <script src="script.js" defer></script>
+    <link href="style.css" rel="stylesheet" >
+</head>
+
+
+
+<body>
+    <header>
+        <!-- <img src="/home.svg"> -->
+        <div class="pageTitle">
+            <h1>
+              Drive Cool
+            </h1>
+            <h3>l'app qui te dit combien de temps en plus pour parcourir une distance en conduisant un poil moins vite!</h3>
+        </div>
+    </header>
+
+    <main>
+        <section class="parametre">
+            
+            <div>
+                <p>Distance a parcourir: <br><span class="distTxt infoInput"></span></p>
+                <input type="range" id="distance" name="distance" min="0" max="500" step="25" value="100" />
+            </div>
+            <div>
+                <p>Vitess Maximum autorisee : <br><span class="speedTxt infoInput"></span></p>
+                <input type="range" id="speed" name="speed" min="50" max="150" step="10" />
+            </div>
+        
+        </section>
+            
+        <section class="results">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Si vous roulez a :</th>
+                        <th>Ca voud prendra</th>
+                        <th>ou (min de plus)</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+</body>
+
+
+</html>
