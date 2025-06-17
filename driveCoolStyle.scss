@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap');
 
-
 $cd-mainColor: #0f4c81;
+$cd-SecondaryColor: #3d91a6;
+$cd-thirdColor: #65CDC7;
+
 $mainFont: "Playwrite HU";
 $borderRad: 20px;
 
@@ -56,19 +58,40 @@ main{
     }
 }
 
-/* .btn{
+.ShortLong{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.btn{
     background-color: white;
     border: 2px solid $cd-mainColor;
     border-radius: $borderRad;
     padding: 0.5rem;
-    margin: 2rem;
     width:20vh;
     text-align: center;
+    margin-top: 1rem;;
     &:hover{
+        cursor: pointer;
         background-color: $cd-mainColor;
         color: white;
     }
-} */
+    &--shortDist{
+        border-radius: $borderRad 0 0 $borderRad;
+        border-right: none;
+    }
+    &--longDist{
+        border-radius: 0 $borderRad $borderRad 0;
+    }
+    &--active{
+        background-color: $cd-mainColor;
+        color: white;
+        :hover{
+            background-color: white;
+            color: $cd-mainColor;
+        }
+    }
+}
 
 .results{
     margin-top: 2rem;
@@ -78,12 +101,23 @@ main{
     justify-content: center;
     align-items: center;
     & table {
-        width: 80%;
+        width:100%;
         border-collapse: collapse;
         border: 2px solid $cd-mainColor;
         font-family: "roboto", sans-serif;
         font-size: 1rem;
         text-align: center;
+        & td{
+            padding: 5px;
+            border: 1px dashed $cd-mainColor;
+        }
+        & th{
+            padding-top: 0.8rem;
+            padding-bottom: 1rem;
+            border-left: 1px dashed $cd-SecondaryColor;
+            background-color: $cd-mainColor;
+            color: white;
+        }
     }
 
 }

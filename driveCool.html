@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DriveCool</title>
-    <script src="script.js" defer></script>
-    <link href="style.css" rel="stylesheet" >
+    <script src="driveCoolSript.js" defer></script>
+    <link href="driveCoolStyle.css" rel="stylesheet" >
 </head>
 
 
@@ -23,15 +23,19 @@
     </header>
 
     <main>
+        <div class="ShortLong">
+            <div class="btn btn--shortDist"> Short Distance</div>
+            <div class="btn btn--longDist"> Long Distance</div>
+        </div>
         <section class="parametre">
             
             <div>
                 <p>Distance à parcourir: <br><span class="distTxt infoInput"></span></p>
-                <input type="range" id="distance" name="distance" min="0" max="500" step="25" value="100" />
+                <input type="range" id="distance" name="distance" min="0" max="25" step="1" value="15" />
             </div>
             <div>
-                <p>Vitess maximum autorisée : <br><span class="speedTxt infoInput"></span></p>
-                <input type="range" id="speed" name="speed" min="50" max="150" step="10" />
+                <p>Vitesse maximum autorisée : <br><span class="speedTxt infoInput"></span></p>
+                <input type="range" id="speed" name="speed" min="50" max="130" step="10" value="90"/>
             </div>
         
         </section>
@@ -40,9 +44,9 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Si tu roules à :</th>
-                        <th>Ca te prendra</th>
-                        <th>ou (min de plus)</th>
+                        <th>Si tu <br> roules à</th>
+                        <th>Ca te <br> prendra</th>
+                        <th>ou <br>(min de plus)</th>
                     </tr>
                 </thead>
                 <tbody>

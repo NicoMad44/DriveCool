@@ -73,19 +73,54 @@ main {
   color: #0f4c81;
 }
 
-/* .btn{
-    background-color: white;
-    border: 2px solid $cd-mainColor;
-    border-radius: $borderRad;
-    padding: 0.5rem;
-    margin: 2rem;
-    width:20vh;
-    text-align: center;
-    &:hover{
-        background-color: $cd-mainColor;
-        color: white;
-    }
-} */
+.ShortLong {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.btn {
+  background-color: white;
+  border: 2px solid #0f4c81;
+  border-radius: 20px;
+  padding: 0.5rem;
+  width: 20vh;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #0f4c81;
+  color: white;
+}
+
+.btn--shortDist {
+  border-radius: 20px 0 0 20px;
+  border-right: none;
+}
+
+.btn--longDist {
+  border-radius: 0 20px 20px 0;
+}
+
+.btn--active {
+  background-color: #0f4c81;
+  color: white;
+}
+
+.btn--active :hover {
+  background-color: white;
+  color: #0f4c81;
+}
+
 .results {
   margin-top: 2rem;
   width: 100%;
@@ -105,11 +140,24 @@ main {
 }
 
 .results table {
-  width: 80%;
+  width: 100%;
   border-collapse: collapse;
   border: 2px solid #0f4c81;
   font-family: "roboto", sans-serif;
   font-size: 1rem;
   text-align: center;
 }
-/*# sourceMappingURL=style.css.map */
+
+.results table td {
+  padding: 5px;
+  border: 1px dashed #0f4c81;
+}
+
+.results table th {
+  padding-top: 0.8rem;
+  padding-bottom: 1rem;
+  border-left: 1px dashed #3d91a6;
+  background-color: #0f4c81;
+  color: white;
+}
+/*# sourceMappingURL=driveCoolStyle.css.map */
