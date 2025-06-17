@@ -7,7 +7,6 @@ $cd-thirdColor: #65CDC7;
 $mainFont: "Playwrite HU";
 $borderRad: 20px;
 
-
 header{
     display: flex;
     flex-direction: row;
@@ -70,7 +69,7 @@ main{
     padding: 0.5rem;
     width:20vh;
     text-align: center;
-    margin-top: 1rem;;
+    margin-top: 1rem;
     &:hover{
         cursor: pointer;
         background-color: $cd-mainColor;
@@ -119,6 +118,11 @@ main{
             color: white;
         }
     }
-
 }
 
+.rotation{
+    display: inline-block;
+    transform: rotateX(2turn);
+    transition: transform 1s;
+    
+}

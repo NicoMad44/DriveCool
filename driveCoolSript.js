@@ -21,6 +21,7 @@ makeTable(speed,distance);
 btnShortDist.addEventListener("click", (event)=>{
     btnShortDist.classList.toggle("btn--active");
     btnLongDist.classList.toggle("btn--active");
+
     if(btnShortDist.classList.contains("btn--active")){
         distanceInput.max=25;
         distanceInput.step=1;
@@ -31,12 +32,14 @@ btnShortDist.addEventListener("click", (event)=>{
         speed = speedInput.valueAsNumber;
         speedTxtDisplayed.innerText=`${speed} km/h`;
     }
+    animateInputText()
     makeTable(speed,distance);
 })
 
 btnLongDist.addEventListener("click",()=>{
     btnShortDist.classList.toggle("btn--active");
     btnLongDist.classList.toggle("btn--active");
+
     if(btnLongDist.classList.contains("btn--active")){
         distanceInput.max=500;
         distanceInput.step=25;
@@ -47,7 +50,7 @@ btnLongDist.addEventListener("click",()=>{
         speed = speedInput.valueAsNumber;
         speedTxtDisplayed.innerText=`${speed} km/h`;
     }
-
+    animateInputText()
     makeTable(speed,distance);
 })
 
@@ -62,6 +65,21 @@ function checkBtnActive(btn){
         btn.classList.add("btn--active");
     }
 }
+
+/********************************************************
+ * function d'animation des text input (distance and speed)
+*********************************************************/
+function animateInputText(){
+    distanceTxtDisplayed.classList.remove("rotation");
+    speedTxtDisplayed.classList.remove("rotation");
+    void distanceTxtDisplayed.offsetWidth;
+    void speedTxtDisplayed.offsetWidth;
+    distanceTxtDisplayed.classList.add("rotation");
+    speedTxtDisplayed.classList.add("rotation");
+}
+
+
+
 
 /********************************************************
  * Event Listner sur les inputs pour regenerer la table 
